@@ -46,7 +46,7 @@ of the course.
 
 ## Installation
 
-git clone https://github.com/SabumnimKim/intranet.tricell.local_NodeJS.git
+git clone https://github.com/BeltonPelton/duvalia.tricell.local-Backend.git
 
 npm install
 
