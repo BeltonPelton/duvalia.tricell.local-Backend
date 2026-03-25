@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const config = require('../config/globals.json');
-//test
+
 router.use(express.static('./public'));
 const path = require('path');
 
