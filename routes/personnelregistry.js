@@ -63,7 +63,7 @@ router.get('/', (request, response) =>
             htmlOutput +="<tr><td width=\"350\" align=\"left\">";
             htmlOutput +="<h2>Personnel Registry:</h2>\n";
             htmlOutput +="</td><td width=\"350\" align=\"right\">";
-            htmlOutput +="<a href=\""+config.webbadress+"/api/newemployee\" style=\"color:#336699;text-decoration:none;\">Add new employee</a>";
+            htmlOutput +="<a href=\"/api/newemployee\" style=\"color:#336699;text-decoration:none;\">Add new employee</a>";
             htmlOutput +="</td></tr></table>";
         }
         else
@@ -107,14 +107,14 @@ router.get('/', (request, response) =>
             // Lägg till respektive employee till utskrift-variabeln
             htmlOutput += "<div class=\"resp-table-row\">\n";
             htmlOutput += "<div class=\"table-body-cell\">" + str_employeeCode + "</div>\n";
-            htmlOutput += "<div class=\"table-body-cell-bigger\"><a href=\""+config.webbadress+"/api/personnelregistry/" + str_employeeCode + "\">" + str_name + "</a></div>\n";
+            htmlOutput += "<div class=\"table-body-cell-bigger\"><a href=\"/api/personnelregistry/" + str_employeeCode + "\">" + str_name + "</a></div>\n";
             htmlOutput += "<div class=\"table-body-cell\"> " + str_signatureDate + "</div>\n";
             htmlOutput += "<div class=\"table-body-cell\"> " + str_rank + "</div>\n";
             htmlOutput += "<div class=\"table-body-cell\"> " + str_securityAccessLevel + "</div>\n";
             if(request.session.loggedin)
             {
-                htmlOutput += "<div class=\"table-body-cell\"><a href=\""+config.webbadress+"/api/editemployee/" + str_id + "\" style=\"color:#336699;text-decoration:none;\">E</a></div>\n";
-                htmlOutput += "<div class=\"table-body-cell\"><a href=\""+config.webbadress+"/api/deleteemployee/" + str_id + "\" style=\"color:#336699;text-decoration:none;\">D</a></div>\n";
+                htmlOutput += "<div class=\"table-body-cell\"><a href=\"/api/editemployee/" + str_id + "\" style=\"color:#336699;text-decoration:none;\">E</a></div>\n";
+                htmlOutput += "<div class=\"table-body-cell\"><a href=\"/api/deleteemployee/" + str_id + "\" style=\"color:#336699;text-decoration:none;\">D</a></div>\n";
             }
             htmlOutput += "</div>\n";
         }  
